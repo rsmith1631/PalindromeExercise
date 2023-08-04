@@ -10,13 +10,17 @@ namespace PalindromeExercise
     {
         public bool IsAPalidrome(string x)
         {
-            string reverse = "";
+            var reverse = "";
 
             for (int i = x.Length - 1; i >= 0; i--)
             {
                 reverse += x[i];
             }
-            if (x == reverse)
+            if (x == "")
+            {
+                return false;
+            }
+            if (reverse.ToLower() == x.ToLower())
             {
                 return true;
             }
@@ -24,6 +28,7 @@ namespace PalindromeExercise
             {
                 return false;
             }
+           
         }
     }
 }
